@@ -1,21 +1,23 @@
 <template>
   <div class="home">
-    <header>
-      <a href="/"><img src="../assets/logo.png"></a>
-    </header>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
     <main>
-      <div class="item">
-        <p><a href>week 0</a></p>
+      <div class="demoList">
+        <div class="item">
+          <p><a href>week 0</a></p>
+        </div>
+        <div class="item">
+          <p><a href>week 1</a></p>
+        </div>
+        <div class="item">
+          <p><a href>week 2</a></p>
+        </div>
+        <div class="item">
+          <p><a href>week 3</a></p>
+        </div>
       </div>
-      <div class="item">
-        <p><a href>week 1</a></p>
-      </div>
-      <div class="item">
-        <p><a href>week 2</a></p>
-      </div>
-      <div class="item">
-        <p><a href>week 3</a></p>
+      <div class="messageNews">
+       最新留言<router-link to="/about">前往留言區</router-link>
       </div>
     </main>
   </div>
@@ -37,8 +39,20 @@ export default class Home extends Vue {}
 main
   max-width 1400px
   margin 0 auto
+.demoList
   display flex
   flex-wrap wrap
+  justify-content: space-between;
+  padding 40px 10px
 .item
-  width 49%
+  width 48%
+  padding-top 100px
+  margin 20px 0
+  background-color #eee
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,.2);
+  border-radius: 3px;
+  p
+    background-color #fff
+    margin 0
+    padding 10px
 </style>
